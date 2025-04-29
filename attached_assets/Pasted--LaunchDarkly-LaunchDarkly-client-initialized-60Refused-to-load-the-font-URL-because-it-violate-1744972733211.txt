@@ -1,0 +1,95 @@
+[LaunchDarkly] LaunchDarkly client initialized
+60Refused to load the font '<URL>' because it violates the following Content Security Policy directive: "font-src 'none'".
+Understand this errorAI
+render-chat#index.html:1 Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.
+14Unchecked runtime.lastError: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this errorAI
+render-chat#index.html:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was receivedUnderstand this errorAI
+inlineForm.html:13 Unchecked runtime.lastError: You do not have a background page.Understand this errorAI
+30[Report Only] Refused to load the font '<URL>' because it violates the following Content Security Policy directive: "font-src 'none'".
+
+15Refused to load the font '<URL>' because it violates the following Content Security Policy directive: "font-src <URL> <URL>".
+Understand this errorAI
+framework-6dec990ac73ac0a2.js:1 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this errorAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'ambient-light-sensor'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'battery'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'execution-while-not-rendered'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'execution-while-out-of-viewport'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'layout-animations'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'legacy-image-formats'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'navigation-override'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'oversized-images'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'publickey-credentials'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'speaker-selection'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'unoptimized-images'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'unsized-media'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Unrecognized feature: 'pointer-lock'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Allow attribute will take precedence over 'allowfullscreen'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+framework-6dec990ac73ac0a2.js:1 Allow attribute will take precedence over 'allowpaymentrequest'.
+_ @ framework-6dec990ac73ac0a2.js:1Understand this warningAI
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this errorAI
+workspace_iframe.html:32 Unrecognized feature: 'ambient-light-sensor'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'battery'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-not-rendered'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'execution-while-out-of-viewport'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'layout-animations'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'legacy-image-formats'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'navigation-override'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'oversized-images'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'publickey-credentials'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'speaker-selection'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'unoptimized-images'.Understand this warningAI
+workspace_iframe.html:32 Unrecognized feature: 'unsized-media'.Understand this warningAI
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowfullscreen'.Understand this warningAI
+workspace_iframe.html:32 Allow attribute will take precedence over 'allowpaymentrequest'.Understand this warningAI
+ed956b31-71d7-4599-ac01-a4c55648baa7-00-2w6fevsqep0ab.worf.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)Understand this errorAI
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this errorAI
+ed956b31-71d7-4599-ac01-a4c55648baa7-00-2w6fevsqep0ab.worf.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)Understand this errorAI
+js.stripe.com/v3/controller-with-preconnect-7e20bcd5a3935c0bf3cb416390909274.html#__shared_params__[version]=acacia&apiKey=pk_live_515YpNsJAmnYVOvfnsBqRdATWS6SzbNAslOz1z2tujdKuvRMDAwWMeFXp6dJL1YKRrQjB0WAp0UDGwlFYL7hxw7Fc00QkfxBFsL&apiVersion=2025-01-27.acacia&stripeJsId=c9680809-0b96-4c1b-be3d-0404e253f50c&firstStripeInstanceCreatedLatency=29&controllerCount=1&isCheckout=false&stripeJsLoadTime=1744972494531&manualBrowserDeprecationRollout=false&mids[guid]=NA&mids[muid]=8984c619-c527-4b96-8f1f-9ec295e6a7e332490a&mids[sid]=23fabaa5-ef42-4685-b23c-0c2f20286dba1c6f56&referrer=https%3A%2F%2Freplit.com%2F%40harrybellman2%2Frender-chat%23index.html&controllerId=__privateStripeController1551:1 Refused to load the stylesheet 'https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa' because it violates the following Content Security Policy directive: "style-src 'self' 'sha256-0hAheEzaMe6uXIKV4EehS9pu1am1lj/KnnzrOYqckXk='". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.
+Understand this errorAI
+js.stripe.com/v3/controller-with-preconnect-7e20bcd5a3935c0bf3cb416390909274.html#__shared_params__[version]=acacia&apiKey=pk_live_515YpNsJAmnYVOvfnsBqRdATWS6SzbNAslOz1z2tujdKuvRMDAwWMeFXp6dJL1YKRrQjB0WAp0UDGwlFYL7hxw7Fc00QkfxBFsL&apiVersion=2025-01-27.acacia&stripeJsId=c9680809-0b96-4c1b-be3d-0404e253f50c&firstStripeInstanceCreatedLatency=29&controllerCount=1&isCheckout=false&stripeJsLoadTime=1744972494531&manualBrowserDeprecationRollout=false&mids[guid]=NA&mids[muid]=8984c619-c527-4b96-8f1f-9ec295e6a7e332490a&mids[sid]=23fabaa5-ef42-4685-b23c-0c2f20286dba1c6f56&referrer=https%3A%2F%2Freplit.com%2F%40harrybellman2%2Frender-chat%23index.html&controllerId=__privateStripeController1551:1 Refused to load the stylesheet 'https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa' because it violates the following Content Security Policy directive: "style-src 'self' 'sha256-0hAheEzaMe6uXIKV4EehS9pu1am1lj/KnnzrOYqckXk='". Note that 'style-src-elem' was not explicitly set, so 'style-src' is used as a fallback.
+Understand this errorAI
+render-chat:1 Access to fetch at 'https://sp.replit.com/v1/t' from origin 'https://replit.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.Understand this errorAI
+sp.replit.com/v1/t:1 
+            
+            
+           Failed to load resource: net::ERR_FAILEDUnderstand this errorAI
+ed956b31-71d7-4599-ac01-a4c55648baa7-00-2w6fevsqep0ab.worf.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)Understand this errorAI
+ed956b31-71d7-4599-ac01-a4c55648baa7-00-2w6fevsqep0ab.worf.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)Understand this errorAI
+workspace_iframe.html:32 Error while parsing the 'sandbox' attribute: 'allow-downloads-without-user-activation' is an invalid sandbox flag.Understand this errorAI
+ed956b31-71d7-4599-ac01-a4c55648baa7-00-2w6fevsqep0ab.worf.replit.dev/:1 
+            
+            
+           Failed to load resource: the server responded with a status of 404 (Not Found)Understand this errorAI
+20Error in event handler: Error: invalid arguments to extensionAdapter.sendMessageToTab
+    at e.sendMessageToTab (<URL>)
+    at e.handleMessage (<URL>)
+    at <URL>
+    at <URL>Understand this errorAI
+429Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.Understand this warningAI
