@@ -1,3 +1,81 @@
+const baseId = 'appGfBRcScvTjKDqF';
+const tableName = 'tblaybpqLFecXqopC';
+const token = 'patCkcfnJCgZJSp8H.0c8c9a921e6393935d4c905a752e8dd0270191459e192e911b81529699e23351';
+
+//OPENAI Thread ID
+let threadId = localStorage.getItem("threadId") || null;
+
+
+const createRecord = async (fields) => {
+  const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ fields }),
+  });
+
+  const data = await response.json();
+  console.log('Created:', data);
+};
+
+
+const fetchData = async () => {
+  const url = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Fetch error:', error.message);
+  }
+};
+
+fetchData();
+
+createRecord({
+  session_id: 'John Doe',
+  thread_id: 'john@example.com',
+  starting_question: 'Who is this?'
+});
+
+
+
+let typingMessageEl = null;
+
+function showTyping() {
+  const chatBox = document.getElementById("chatbox");
+  typingMessageEl = document.createElement("div");
+  typingMessageEl.className = "msg assistant typing";
+  typingMessageEl.textContent = "Typing...";
+  chatBox.appendChild(typingMessageEl);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function removeTyping() {
+  if (typingMessageEl) {
+    typingMessageEl.remove();
+    typingMessageEl = null;
+  }
+}
+
+
+
+
 function appendMessage(role, content) {
   const chatBox = document.getElementById("chatbox");
   const message = document.createElement("div");
@@ -15,13 +93,18 @@ async function sendMessage() {
   appendMessage("user", userMessage);
   inputElement.value = "";
 
+  showTyping();
+
   try {
     const response = await fetch("https://eoa21w4qk9rme7d.m.pipedream.net", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ userMessage }),
+      body: JSON.stringify({ 
+        userMessage, 
+        threadId: threadId || undefined // Only send if it exists 
+      }),
     });
 
     if (!response.ok) {
@@ -30,6 +113,17 @@ async function sendMessage() {
 
     const data = await response.json();
     console.log("📦 API response:", data);
+
+    // ✅ Save threadId for future use
+    if (data.threadId) {
+      threadId = data.threadId;
+      console.log(threadId);
+      localStorage.setItem("threadId", threadId);
+    }
+
+    removeTyping();
+
+
     const reply = data.response;
     if (reply) {
       appendMessage("assistant", reply);
