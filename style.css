@@ -12,11 +12,15 @@ body {
   overflow-y: auto;
   padding: 10px;
   background: #FF4D6D;
+  background: black;
+  border: 4px solid #ff4d6d;
+  boarder-radius: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 #chat-form{
-  background: #171a1c;
-  background: black;
+  background: #ff4d6d;
 }
 
 input{
@@ -40,12 +44,17 @@ input::placeholder{
   color: white;
   background: #171A1C;
   align-self: flex-end;
+  background: black;
+  border: 2px solid #ff637f;
+  justify-content: flex-end;
 }
 
 .msg.assistant {
   background: crimson;
+  bakground: black;
   color:white;
   align-self: flex-start;
+  border: 2px solid #d53e59;
 }
 
 form {
@@ -69,4 +78,9 @@ button {
   color: red;
   text-align: center;
   padding: 4px;
+}
+
+.typing{
+  background: #ff637f !important;
+  border: none;
 }
