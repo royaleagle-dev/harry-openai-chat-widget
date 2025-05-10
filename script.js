@@ -54,6 +54,39 @@ createRecord({
 });
 
 
+let recognition;
+
+function startListening() {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    alert("Speech recognition not supported in this browser.");
+    return;
+  }
+
+  recognition = new SpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = () => {
+    console.log("🎙️ Listening...");
+  };
+
+  recognition.onerror = (event) => {
+    console.error("Speech recognition error:", event.error);
+  };
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    console.log("📝 Transcript:", transcript);
+    document.getElementById("input").value = transcript;
+    sendMessage(); // Reuse your existing function
+  };
+
+  recognition.start();
+}
+
+
 
 let typingMessageEl = null;
 
