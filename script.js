@@ -1,3 +1,7 @@
+//start a new session on refresh;
+localStorage.removeItem("threadId");
+
+
 const baseId = 'appGfBRcScvTjKDqF';
 const tableName = 'tblaybpqLFecXqopC';
 const token = 'patCkcfnJCgZJSp8H.0c8c9a921e6393935d4c905a752e8dd0270191459e192e911b81529699e23351';
@@ -46,12 +50,6 @@ const fetchData = async () => {
 };
 
 fetchData();
-
-createRecord({
-  session_id: 'John Doe',
-  thread_id: 'john@example.com',
-  starting_question: 'Who is this?'
-});
 
 
 let recognition;
@@ -152,6 +150,13 @@ async function sendMessage() {
       threadId = data.threadId;
       console.log(threadId);
       localStorage.setItem("threadId", threadId);
+
+      //save record to airtable
+      createRecord({
+          thread_id: threadId,
+          message: userMessage,
+          message_type: 'user'
+      });
     }
 
     removeTyping();
@@ -160,6 +165,12 @@ async function sendMessage() {
     const reply = data.response;
     if (reply) {
       appendMessage("assistant", reply);
+      //save record to airtable
+      createRecord({
+          thread_id: threadId,
+          message: reply,
+          message_type: 'assistant'
+      });
     } else {
       throw new Error("❌ No valid reply received from assistant.");
     }
