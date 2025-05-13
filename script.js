@@ -52,37 +52,73 @@ const fetchData = async () => {
 fetchData();
 
 
+const micBtn = document.getElementById("mic-btn");
+const inputElement = document.getElementById("input");
+micBtnInner = document.querySelector("#mic-btn-inner");
+
 let recognition;
+let isRecording = false;
 
-function startListening() {
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-  if (!SpeechRecognition) {
-    alert("Speech recognition not supported in this browser.");
-    return;
-  }
+if ('webkitSpeechRecognition' in window) {
+  recognition = new webkitSpeechRecognition();
+  recognition.lang = 'en-US';
+  recognition.continuous = true;
+  recognition.interimResults = true;
 
-  recognition = new SpeechRecognition();
-  recognition.lang = "en-US";
-  recognition.interimResults = false;
-  recognition.maxAlternatives = 1;
+  let finalTranscript = "";
 
   recognition.onstart = () => {
-    console.log("🎙️ Listening...");
+    isRecording = true;
+    finalTranscript = "";
+    //micBtn.textContent = "⏹️";
+    micBtnInner.className = "fas fa-stop";
+    micBtn.title = "Stop recording";
+    inputElement.placeholder = "Listening...";
+  };
+
+  recognition.onresult = (event) => {
+    let interimTranscript = "";
+    for (let i = event.resultIndex; i < event.results.length; ++i) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) {
+        finalTranscript += transcript + " ";
+      } else {
+        interimTranscript += transcript;
+      }
+    }
+    inputElement.value = finalTranscript + interimTranscript;
+  };
+
+  recognition.onend = () => {
+    isRecording = false;
+    //micBtn.textContent = "🎤";
+    micBtnInner.className = "fas fa-microphone";
+    micBtn.title = "Start recording";
+    inputElement.placeholder = "Type or use the mic...";
+    // Do NOT send automatically
   };
 
   recognition.onerror = (event) => {
     console.error("Speech recognition error:", event.error);
+    recognition.stop();
   };
-
-  recognition.onresult = (event) => {
-    const transcript = event.results[0][0].transcript;
-    console.log("📝 Transcript:", transcript);
-    document.getElementById("input").value = transcript;
-    sendMessage(); // Reuse your existing function
-  };
-
-  recognition.start();
+} else {
+  micBtn.disabled = true;
+  micBtn.title = "Speech recognition not supported in this browser.";
 }
+
+micBtn.addEventListener("click", () => {
+  if (!recognition) return;
+
+  if (isRecording) {
+    recognition.stop(); // Stop only — DO NOT call sendMessage()
+  } else {
+    recognition.start(); // Start recognition
+  }
+});
+
+
+
 
 
 
@@ -112,6 +148,17 @@ function appendMessage(role, content) {
   const message = document.createElement("div");
   message.className = `msg ${role}`;
   message.textContent = content;
+
+  if (role === "assistant") {
+    // Convert markdown to HTML
+    const html = marked.parse(content);
+    message.innerHTML = html;
+  } else {
+    // Plain text for user
+    message.textContent = content;
+  }
+
+
   chatBox.appendChild(message);
   chatBox.scrollTop = chatBox.scrollHeight;
 }
