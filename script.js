@@ -1,3 +1,13 @@
+const input = document.getElementById("input");
+
+function autoResize() {
+  input.style.height = "auto"; // Reset the height
+  input.style.height = `${input.scrollHeight}px`; // Set to full content height
+}
+
+// Auto-resize on input
+input.addEventListener("input", autoResize);
+
 //start a new session on refresh;
 localStorage.removeItem("threadId");
 
@@ -87,6 +97,7 @@ if ('webkitSpeechRecognition' in window) {
       }
     }
     inputElement.value = finalTranscript + interimTranscript;
+    autoResize()
   };
 
   recognition.onend = () => {
@@ -170,6 +181,7 @@ async function sendMessage() {
 
   appendMessage("user", userMessage);
   inputElement.value = "";
+  input.style.height = "auto"; //revert input to original height
 
   showTyping();
 
