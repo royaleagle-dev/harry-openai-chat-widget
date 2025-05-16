@@ -61,6 +61,7 @@ form {
   display: flex;
   padding: 10px;
   background: #fff;
+  justify-content: space-between;
 }
 
 input[type="text"] {
@@ -70,7 +71,7 @@ input[type="text"] {
 }
 
 #input {
-  width: 100%;
+  width: 65%;
   resize: none; /* Prevent manual resizing */
   overflow: hidden; /* Hide scrollbars */
   line-height: 1.5;
