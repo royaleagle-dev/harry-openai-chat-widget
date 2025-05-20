@@ -179,6 +179,14 @@ async function sendMessage() {
   const userMessage = inputElement?.value.trim();
   if (!userMessage) return;
 
+    // Stop recording if it's active
+  if (isRecording && recognition) {
+    recognition.stop();
+    isRecording = false;
+    //updateMicButton(); // optional: to update mic button UI
+    micBtnInner.className = "fas fa-mic";
+  }
+
   appendMessage("user", userMessage);
   inputElement.value = "";
   input.style.height = "auto"; //revert input to original height
