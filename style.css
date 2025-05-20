@@ -12,7 +12,7 @@ body {
   overflow-y: auto;
   padding: 10px;
   background: #FF4D6D;
-  background: black;
+  background: transparent;
   border: 4px solid #ff4d6d;
   boarder-radius: 20px;
   display: flex;
@@ -44,14 +44,14 @@ input::placeholder, textarea::placeholder{
   color: white;
   background: #171A1C;
   align-self: flex-end;
-  background: black;
+  /*background: black;*/
   border: 2px solid #ff637f;
   justify-content: flex-end;
 }
 
 .msg.assistant {
   background: crimson;
-  bakground: black;
+  /*bakground: black;*/
   color:white;
   align-self: flex-start;
   border: 2px solid #d53e59;
@@ -68,15 +68,6 @@ input[type="text"] {
   flex: 1;
   padding: 8px;
   font-size: 1rem;
-}
-
-#input {
-  width: 65%;
-  resize: none; /* Prevent manual resizing */
-  overflow: hidden; /* Hide scrollbars */
-  line-height: 1.5;
-  font-size: 1rem;
-  padding: 8px;
 }
 
 button {
