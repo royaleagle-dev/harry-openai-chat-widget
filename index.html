@@ -24,19 +24,20 @@
   <div id="chatbox" class="chatbox">
     
     <div class="msg assistant">
-      Hey — I’m Render.
-I’ll help you define a clear direction for your next track.
-If you need anything as we go, just ask.
-To begin, is there a reference track you want to use as inspiration?
+      <p style="margin-bottom: 2%;">Hey — I’m Render.</p>
+      <p style="margin-bottom: 2%;">I’ll help you define a clear direction for your next track.
+        If you need anything as we go, just ask.</p>
+      <p style="font-weight:bold;">To begin, is there a reference track you want to use as inspiration?</p>
     </div>
 
   </div>
 
-  <form id="chat-form" style="gap:5%;background:black;padding-left:0;padding-right:0;">
+  <form id="chat-form" style="gap:5%;background:transparent;padding-left:0;padding-right:0;">
     <!--<input id="input" class="space-grotesk-400" type="text" placeholder="Message Render..." autocomplete="off" style="border-radius:10px;"/>-->
-    <textarea rows="1" id="input" class="space-grotesk-400" type="text" placeholder="Message Render..." autocomplete="off" style="border-radius:5px;height:25px;"></textarea>
-    <div>
-      <button type="button" style="background:#ff637f;color:white;border:none;border-radius:10px;margin-bottom:5px;" id="mic-btn"><span class="fas fa-microphone" id="mic-btn-inner"></span></button>
+    <textarea id="input" class="space-grotesk-400" style="border-radius:10px;width:100%;padding:5px !important;"></textarea>
+    <!--<textarea rows="1" id="input" class="space-grotesk-400" type="text" placeholder="Message Render..." autocomplete="off" style="border-radius:5px;height:25px;"></textarea>-->
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button type="button" style="background:#ff637f;color:white;border:none;border-radius:10px;" id="mic-btn"><span class="fas fa-microphone" id="mic-btn-inner"></span></button>
       <button type="submit" style="background:#ff637f;color:white;border:none;border-radius:10px;"><span class="fas fa-paper-plane"></span></button>
     </div>
   </form>
